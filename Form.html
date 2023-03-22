@@ -8,23 +8,36 @@
 </head>
 <body>
     <form action="./getFormData.php" method="post" autocomplete="on">
-
+        <div style="color:red">areas marked with * are required</div>
         <table>
             <tr>
-                <td style="width: 75px;"><label for="first-name">Name:</label></td>
-                <td><input type="text" name="first-name" id="first-name" required placeholder="Your name"></td>
+                <td style="width: 100px;"><label for="first-name">*Name:</label></td>
+                <td><input style="width: 100%;" type="text" name="first-name" id="first-name" required ></td>
             </tr>
             <tr>
-                <td><label for="last-name">Last Name:</label></td>
-                <td> <input type="text" id="last-name" name="last-name"><br></td>
+                <td><label for="last-name">*Last Name:</label></td>
+                <td> <input style="width: 100%;" type="text" id="last-name" name="last-name" required><br></td>
             </tr>
             <tr>
-                <td> <label for="email">Email:</label></td>
-                <td><input type="email" id="email" name="email"><br>  </td>
+                <td> <label for="email">*Email:</label></td>
+                <td><input style="width: 100%;" type="email" id="email" name="email" required><br>  </td>
             </tr>
-            <tr><td colspan="2"><Label for="feedback">Please tell us what you think below:</Label></td></tr>
             <tr>
-                <td colspan="2"><textarea name="feedback" id="feedback" cols="30" rows="10"></textarea></td>
+                <td>*Gender:</td>
+                <td>
+                    <input type="radio" name="gender" id="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other">
+                    <label for="other">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><Label for="feedback">*Please tell us what you think below:</Label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea style="width: 100%;" name="feedback" id="feedback" cols="30" rows="10" required></textarea></td>
             </tr>
             <tr>        
                 <td><input type="submit" name="submit" id="submit" value="submit"></td>
