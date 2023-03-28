@@ -14,10 +14,18 @@ function test_input($data){
     return $data;
 }
 
+$arrGender=array(
+    1=>"Male",
+    2=>"Female",
+    3=>"Other"
+);
+      
+
+
 $first_name =test_input( $_POST["first-name"]);
 $last_name =test_input( $_POST["last-name"]);
 $email = test_input($_POST["email"]);
-$gender =test_input($_POST["gender"]);
+$gender =$arrGender[test_input($_POST["gender"])];
 $feedback =test_input($_POST["feedback"]);
 ?>
     <h1>Thank you for your feedback</h1>
